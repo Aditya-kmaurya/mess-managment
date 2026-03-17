@@ -133,7 +133,7 @@ router.post('/apply', authMiddleware, async (req, res) => {
             reason: reason || ''
         });
 
-        await messOff.save();
+        await MessOff.save();
 
         res.status(201).json({
             success: true,
