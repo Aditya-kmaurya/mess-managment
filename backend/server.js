@@ -23,7 +23,7 @@ mongoose.connect(process.env.MONGODB_URI )
 
 const authRoutes = require('./routes/auth');
 const studentRoutes = require('./routes/student');
-const messOffRoutes = require('./routes/messOff');
+const messOffRoutes = require('./routes/MessOff');
 const feedbackRoutes = require('./routes/feedback');
 const menuRoutes = require('./routes/menu');
 const billRoutes = require('./routes/bill');
