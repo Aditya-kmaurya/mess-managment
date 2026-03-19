@@ -35,6 +35,9 @@ app.use((req, res, next) => {
 });
 
 // Public Menu
+app.get('/api/test', (req, res) => {
+  res.json({ success: true, message: 'Backend is working!' });
+});
 app.get('/api/menu/public', getPublicMenu);
 app.put('/api/menu/public', upsertPublicMenu);
 
