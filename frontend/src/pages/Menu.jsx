@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { getApiBase } from "../apiBase";
 
-const API_BASE = import.meta.env.VITE_API_URL;
+const API_BASE = getApiBase();
+
+
+
 
 // Fallback when API is down or no data
 const FALLBACK_HOSTELS = {
@@ -20,7 +24,7 @@ export default function Menu() {
     setLoading(true);
     setError(null);
 
-    fetch(`${API_BASE}/api/menu/public`)
+    fetch(`${API_BASE}/menu/public`)
       .then((res) => res.json())
       .then((json) => {
         if (cancelled) return;

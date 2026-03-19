@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from "react";
+import { getApiBase } from "../apiBase";
 import {
   Lock,
   Mail,
@@ -60,7 +61,7 @@ export default function Login() {
     phoneNo: "",
   });
 
-  const API_URL = "http://localhost:5000/api";
+  const API_URL = getApiBase();
 
   // Hostel options
   const hostelOptions = [

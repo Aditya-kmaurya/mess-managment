@@ -1,5 +1,5 @@
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
-
+import { getApiBase } from "../../apiBase";
+const API_BASE = getApiBase();
 function getAuthHeaders() {
   const token = localStorage.getItem('authToken');
   const headers = { 'Content-Type': 'application/json' };

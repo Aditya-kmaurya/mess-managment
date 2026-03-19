@@ -1,5 +1,6 @@
 
 // --- IMPORTS ---
+import { getApiBase } from "../../apiBase";
 import React, { useState, useEffect } from 'react';
 import { Home, BarChart2, CalendarOff, LogOut, Menu, X, QrCode, Download, FileText, ThumbsUp, Meh, ThumbsDown, Angry, MessageSquare, UtensilsCrossed, Bell, User, ChevronRight, Activity, DollarSign, Calendar, CheckCircle, XCircle, Clock } from 'lucide-react';
 import jsPDF from 'jspdf';
@@ -7,7 +8,7 @@ import autoTable from 'jspdf-autotable';
 import { QRCodeCanvas } from 'qrcode.react';
 
 // --- API SERVICE LAYER ---
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = getApiBase();
 
 const apiService = {
   fetchStudentData: async (token) => {
